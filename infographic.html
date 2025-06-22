@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Canada's AI Energy Imperative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-value {
+            font-weight: 900;
+            font-size: 4rem;
+            line-height: 1;
+        }
+         .kpi-value-small {
+            font-weight: 900;
+            font-size: 3rem;
+            line-height: 1;
+        }
+        .section-icon {
+            font-size: 3rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#CAF0F8]">
+
+    <header class="bg-[#004AAD] text-white p-8 text-center rounded-b-3xl shadow-2xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">Powering Tomorrow's Intelligence</h1>
+        <p class="text-lg md:text-xl text-[#90E0EF]">Canada's Strategic Opportunity in the AI Energy Revolution</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="md:col-span-2 lg:col-span-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4 text-center">1. The AI Energy Tsunami: An Unprecedented Demand Surge</h2>
+                <p class="text-gray-700 text-center max-w-4xl mx-auto mb-8">The exponential growth of Artificial Intelligence is creating a voracious and rapidly accelerating demand for electricity. Data centers, the backbone of AI, are on track to consume a massive share of global power, pushing existing energy grids to their absolute limits and creating an urgent need for new, sustainable energy sources.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-bold text-xl text-center text-[#0077B6] mb-2">Projected Global Data Center Consumption (TWh)</h3>
+                        <div class="chart-container">
+                            <canvas id="globalEnergyDemandChart"></canvas>
+                        </div>
+                         <p class="text-sm text-gray-600 mt-4 text-center">Global data center electricity demand is projected to more than double between 2022 and 2026, reaching a level comparable to the entire nation of Japan.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center h-full">
+                        <h3 class="font-bold text-xl text-center text-[#0077B6] mb-4">AI's Share of US Electricity</h3>
+                        <div class="chart-container" style="height:250px; max-height:250px;">
+                            <canvas id="usShareChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">By 2028, data centers could consume up to <strong>12%</strong> of all electricity in the United States, a threefold increase from 2023 levels, largely driven by AI's expansion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4 text-center">2. The Hyperscaler Arms Race: Fueling the Future</h2>
+                <p class="text-gray-700 text-center max-w-4xl mx-auto mb-8">Tech giants are in a fierce race to build the infrastructure for AI dominance, announcing staggering investments that translate into immediate, unprecedented demand for energy. Their challenge is not just finding enough power, but finding power that is clean, reliable, and available now.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-bold text-xl text-center text-[#0077B6] mb-2">Planned 2025 Data Center Capex (USD)</h3>
+                        <div class="chart-container" style="height:380px;">
+                            <canvas id="techCapexChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">Leading tech companies are collectively investing hundreds of billions of dollars in data center expansion, creating a massive, concentrated demand for new energy contracts.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-around">
+                        <div class="text-center">
+                            <h3 class="font-bold text-xl text-center text-[#0077B6] mb-2">Meta's Nuclear Pivot</h3>
+                             <p class="section-icon text-[#004AAD]">⚛️</p>
+                            <p class="text-gray-700 mt-2">A <strong>20-year</strong> power purchase agreement with Constellation Energy to secure firm, carbon-free nuclear power for its AI data centers.</p>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="font-bold text-xl text-center text-[#0077B6] mb-2">Microsoft's Baseload Bet</h3>
+                            <p class="section-icon text-[#004AAD]">💡</p>
+                            <p class="text-gray-700 mt-2">A major PPA to secure <strong>24/7 carbon-free</strong> energy from nuclear sources, acknowledging that intermittent renewables alone cannot meet AI's constant power needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6">
+                 <h2 class="text-3xl font-bold text-[#004AAD] mb-4 text-center">3. Canada's Unmatched Advantage</h2>
+                 <p class="text-gray-700 text-center max-w-4xl mx-auto mb-8">Canada is uniquely positioned to solve the AI energy puzzle. A rare combination of abundant clean energy, a naturally cool climate, low electricity costs, and vast critical mineral reserves makes it the prime global destination for AI data center investment.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                     <div class="bg-white rounded-lg shadow-lg p-6 text-center flex flex-col justify-center">
+                        <h3 class="font-bold text-xl text-[#0077B6] mb-2">Clean Power Leader</h3>
+                        <p class="text-[#004AAD] kpi-value">84%</p>
+                        <p class="font-semibold text-xl text-gray-800">Non-Emitting Electricity</p>
+                        <p class="text-sm text-gray-600 mt-4">Canada's grid is one of the cleanest in the world, a stark contrast to the U.S. grid (40% non-emitting), making it an ideal partner for tech's net-zero goals.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center flex flex-col justify-center">
+                        <h3 class="font-bold text-xl text-[#0077B6] mb-2">Affordability & Climate</h3>
+                        <p class="text-[#0077B6] kpi-value-small">#1</p>
+                        <p class="font-semibold text-xl text-gray-800">Lowest G7 Electricity Cost</p>
+                        <p class="text-sm text-gray-600 mt-4">Canada's low rates and cold climate, ideal for "free cooling," offer significant operational cost savings for energy-intensive data centers.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-bold text-xl text-center text-[#0077B6] mb-2">Critical Mineral Dominance (Refining)</h3>
+                        <div class="chart-container" style="height:250px; max-height:250px;">
+                            <canvas id="criticalMineralsChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">As China controls over two-thirds of critical mineral refining, Canada's vast, secure reserves are vital for North American technological independence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6">
+                 <h2 class="text-3xl font-bold text-[#004AAD] mb-4 text-center">4. A Financial Revolution for Canadian Energy</h2>
+                 <p class="text-gray-700 text-center max-w-4xl mx-auto mb-8">For Canadian energy producers like AQN, BLX, INE, and NPI, who have faced recent financial pressures, the AI boom is a lifeline. Shifting from low-rate public contracts to high-value private PPAs with tech giants can fundamentally rewrite their financial future.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-bold text-xl text-center text-[#0077B6] mb-4">The PPA Transformation</h3>
+                        <div class="space-y-6">
+                            <div class="p-4 border-l-4 border-red-400 bg-red-50 rounded-r-lg">
+                                <h4 class="font-bold text-lg text-red-800">Legacy Public PPAs</h4>
+                                <ul class="list-disc list-inside text-sm text-red-700 mt-2">
+                                    <li>Low, fixed rates</li>
+                                    <li>Profitability eroded by inflation</li>
+                                    <li>Regulatory & political risk</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center">
+                                <span class="text-4xl text-[#0077B6] font-bold">&darr;</span>
+                            </div>
+                            <div class="p-4 border-l-4 border-green-500 bg-green-50 rounded-r-lg">
+                                <h4 class="font-bold text-lg text-green-800">New Private AI PPAs</h4>
+                                 <ul class="list-disc list-inside text-sm text-green-700 mt-2">
+                                    <li>Higher, negotiated rates</li>
+                                    <li>Long-term (20+ years) revenue certainty</li>
+                                    <li>Creditworthy tech giant counterparties</li>
+                                    <li>Improved cash flow, leverage & valuation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                         <h3 class="font-bold text-xl text-center text-[#0077B6] mb-4">Catalyst for Canadian Producers</h3>
+                        <p class="text-center text-gray-700 mb-6">Securing direct offtake agreements with AI leaders provides a clear path to reversing recent financial headwinds and unlocking significant growth.</p>
+                        <div class="chart-container" style="height:300px; max-height:300px;">
+                            <canvas id="companyOpportunityChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4 text-center">Private PPAs offer a direct solution to challenges like debt pressure (AQN), margin erosion (BLX), balance sheet stress (INE), and cost overruns (NPI).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4 text-center">5. Unlocking the Future: Critical Policy Imperatives</h2>
+                <p class="text-gray-700 text-center max-w-4xl mx-auto mb-8">To seize this generational opportunity, Canada must act decisively. Strategic government action is required to remove bottlenecks and create an investment environment that is fast, fair, and future-proof.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="section-icon text-[#0077B6]">⏱️</p>
+                        <h4 class="font-bold text-lg mt-2 text-[#004AAD]">Streamline Permitting</h4>
+                        <p class="text-sm text-gray-600 mt-2">Reduce project approval times from 5+ years to under 2 to compete globally for capital investment.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="section-icon text-[#0077B6]">🤝</p>
+                        <h4 class="font-bold text-lg mt-2 text-[#004AAD]">Indigenous Partnerships</h4>
+                        <p class="text-sm text-gray-600 mt-2">Move beyond consultation to genuine partnership, ensuring equitable benefit and respecting Indigenous rights.</p>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="section-icon text-[#0077B6]">⚡️</p>
+                        <h4 class="font-bold text-lg mt-2 text-[#004AAD]">Grid Modernization</h4>
+                        <p class="text-sm text-gray-600 mt-2">Invest in transmission and storage to reliably deliver power and avoid US-style interconnection bottlenecks.</p>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-lg p-6">
+                        <p class="section-icon text-[#0077B6]">💎</p>
+                        <h4 class="font-bold text-lg mt-2 text-[#004AAD]">Critical Mineral Strategy</h4>
+                        <p class="text-sm text-gray-600 mt-2">Incentivize domestic extraction and processing to build a secure North American supply chain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center p-6 mt-8">
+        <p class="text-sm text-[#004AAD]">Data synthesized from market research and public company filings. For informational purposes only. June 2025.</p>
+    </footer>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#004AAD',
+            medium: '#0077B6',
+            light: '#00B4D8',
+            sky: '#90E0EF',
+            bg: '#CAF0F8'
+        };
+
+        const tooltipPlugin = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                            return label.join(' ');
+                        } else {
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        function wrapLabels(label, maxLength) {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const globalEnergyDemandCtx = document.getElementById('globalEnergyDemandChart').getContext('2d');
+        new Chart(globalEnergyDemandCtx, {
+            type: 'line',
+            data: {
+                labels: ['2022', '2023', '2024', '2025', '2026'],
+                datasets: [{
+                    label: 'Global Data Center Electricity (TWh)',
+                    data: [460, 600, 780, 950, 1050],
+                    backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                    borderColor: brilliantBlues.light,
+                    tension: 0.4,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: tooltipPlugin,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: { display: true, text: 'TWh' }
+                    }
+                }
+            }
+        });
+
+        const usShareCtx = document.getElementById('usShareChart').getContext('2d');
+        new Chart(usShareCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['AI Data Center Share by 2028', 'Other Electricity Use'],
+                datasets: [{
+                    data: [12, 88],
+                    backgroundColor: [brilliantBlues.medium, brilliantBlues.sky],
+                    borderColor: [brilliantBlues.dark, brilliantBlues.bg],
+                    borderWidth: 2,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: {
+                        position: 'bottom',
+                    },
+                },
+                cutout: '60%'
+            }
+        });
+
+        const techCapexCtx = document.getElementById('techCapexChart').getContext('2d');
+        new Chart(techCapexCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Amazon AWS', 'Microsoft', 'Google'],
+                datasets: [{
+                    label: 'Planned 2025 Capex (in Billions)',
+                    data: [100, 80, 75],
+                    backgroundColor: [brilliantBlues.dark, brilliantBlues.medium, brilliantBlues.light],
+                    borderColor: [brilliantBlues.dark, brilliantBlues.medium, brilliantBlues.light],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'USD (Billions)' }
+                    }
+                }
+            }
+        });
+
+        const criticalMineralsCtx = document.getElementById('criticalMineralsChart').getContext('2d');
+        new Chart(criticalMineralsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Rare Earths', 'Lithium', 'Cobalt', 'Nickel'],
+                datasets: [{
+                    label: "China's Share of Refining",
+                    data: [90, 65, 70, 68],
+                    backgroundColor: brilliantBlues.medium,
+                }, {
+                    label: 'Rest of World',
+                    data: [10, 35, 30, 32],
+                    backgroundColor: brilliantBlues.sky,
+                }]
+            },
+            options: {
+                plugins: {
+                    ...tooltipPlugin,
+                     legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 12 }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true },
+                    y: {
+                        stacked: true,
+                        ticks: {
+                            callback: function(value) { return this.getLabelForValue(value) + '%' }
+                        },
+                        title: { display: true, text: 'Global Refining Share' }
+                    }
+                }
+            }
+        });
+        
+        const companyOpportunityCtx = document.getElementById('companyOpportunityChart').getContext('2d');
+        const originalLabels = [
+            'AQN: Mitigate Debt Pressure & Recapitalize', 
+            'BLX: Overcome Margin Pressure, Accelerate Pipeline', 
+            'INE: Alleviate Balance Sheet Stress with Stable Contracts', 
+            'NPI: Offset Cost Overruns & Improve Project IRRs'
+        ];
+        const wrappedCompanyLabels = originalLabels.map(label => wrapLabels(label, 25));
+
+        new Chart(companyOpportunityCtx, {
+            type: 'radar',
+            data: {
+                labels: wrappedCompanyLabels,
+                datasets: [{
+                    label: 'Potential Impact of AI PPAs',
+                    data: [8, 9, 8, 7],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                    borderColor: brilliantBlues.light,
+                    pointBackgroundColor: brilliantBlues.light,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: brilliantBlues.light
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: tooltipPlugin,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { font: { size: 10 } },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                         ticks: {
+                            display: false,
+                            stepSize: 2
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
